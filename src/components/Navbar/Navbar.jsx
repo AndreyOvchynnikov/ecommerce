@@ -41,7 +41,7 @@ const navbarContainer = useRef();
             </div>
             <div className="nav-items">
               <div className="nav-links nav-items">
-                <Link to="/products">
+                <Link to="/categories">
                   <span className="nav-item">CATEGORIES</span>
                 </Link>
                 <Link href="/category/lamps">
@@ -107,7 +107,7 @@ const navbarContainer = useRef();
                   </svg>
                 </div>
                 <div className="menu">
-                  <Link href="/category/all">
+                  <Link to="/categories">
                     <span className="nav-item">CATEGORIES</span>
                   </Link>
                   <Link href="/category/lamps">
