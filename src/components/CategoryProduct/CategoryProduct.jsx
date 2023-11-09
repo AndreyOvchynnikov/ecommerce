@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import ActionButton from '../ActionButton';
+
 
 const CategoryProduct = ({ property, productDetails }) => {
 
@@ -24,10 +24,7 @@ const CategoryProduct = ({ property, productDetails }) => {
             <>
               <div className="wide-right-container">
                 <div className="wide-title">{productDetails.wideCardTitle}</div>
-                {/* <ActionButton
-                  text="VIEW MORE"
-                  link="/"
-                /> */}
+                <button className="actionBtn">VIEW MORE</button>
               </div>
             </>
           )}

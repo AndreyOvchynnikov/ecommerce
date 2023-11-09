@@ -1,12 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CategoryProduct from '../components/CategoryProduct/CategoryProduct';
 import { products } from "../components/AllData";
-import { useStateContext } from "../components/context/StateContext";
+import { useEffect, useState } from "react";
+
 
 
 const Categories = () => {
-  const { category, handleChangeCategory, } = useStateContext();
-
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const { category } = useParams();
+  
+  useEffect(() => {
+    setSelectedCategory(category)
+  }, [category])
+ 
     const selectCategories = products.reduce((acc, { category }) => {
         if (acc.includes(category)) {
             return acc;
@@ -14,8 +20,8 @@ const Categories = () => {
         return [...acc, category]
     }, [])
     
-    const filteredProducts = category === "All" ?
-        [...products] : products.filter(product => product.category === category);
+    const filteredProducts = selectedCategory === "All" ?
+        [...products] : products.filter(product => product.category === selectedCategory);
         
     return (
     <>
@@ -23,18 +29,18 @@ const Categories = () => {
         <div className="category-header">
           <div className="category-header-left">
             <Link to="/">
-              <div className="category-header-previous" onClick={() => handleChangeCategory("All")}>
+                <div className="category-header-previous">
                 <span>&#60;</span>Home
               </div>
             </Link>
           </div>
           <div className="category-header-center">
-            <h2 className="category-title">{category.toUpperCase()}</h2>
+            <h2 className="category-title">{selectedCategory.toUpperCase()}</h2>
           </div>
           <div className="category-header-right">
             <select
               defaultValue=""
-                onChange={(e) => handleChangeCategory(e.target.value)}
+                onChange={(e) => setSelectedCategory(e.target.value)}
               name="category"
               id="select-category"
             >
@@ -57,7 +63,7 @@ const Categories = () => {
                   productDetails={product} />
                 ) 
               )
-            }; 
+            } 
         </div>
       </div>
     </>

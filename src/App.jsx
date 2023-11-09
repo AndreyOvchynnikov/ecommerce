@@ -32,8 +32,8 @@ function App() {
         <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-          <Route path="categories" element={<Categories />} />
-          <Route path="categories/products/:productId" element={<ProductPage />} />
+          <Route path="categories/:category" element={<Categories />} />
+          <Route path="categories/:category/products/:productId" element={<ProductPage />} />
         <Route path="products/:productId" element={<ProductPage />} />
       </Route>
     </Routes>

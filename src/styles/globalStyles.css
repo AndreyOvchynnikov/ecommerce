@@ -453,6 +453,25 @@ a {
   gap: 30px;
 }
 
+.actionBtn{
+  padding: 10px 13px;  
+  border: 3px solid var(--action-btn-color);
+  font-weight: 700;
+  transition: .1s ease-in-out;
+  box-sizing: border-box !important;
+  width: fit-content;
+  color: white;
+  background-color: black;
+  outline: 2px solid black;
+  outline-offset: -2px;
+  cursor: pointer;
+}
+
+.actionBtn:hover{
+  background-color: transparent;
+  color: black;
+}
+
 /* ============= DETAILED STYLING ========== */
 @media only screen and (max-width: 600px) {
   .nav-links {
@@ -721,8 +740,9 @@ a {
 
 .product-specs {
   margin-top: 100px;
-  display: grid;
+  display: grid; 
   grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 

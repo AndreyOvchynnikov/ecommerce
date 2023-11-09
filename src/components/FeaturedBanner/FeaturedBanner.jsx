@@ -11,7 +11,7 @@ const FeaturedBanner = () => {
                 <p className="featured-desc">Products are all made to standard sizes so
                     that you can mix and match them freely.
                 </p>
-            <ActionButton text="SOPE NOW" link="/category/furniture" />
+            <ActionButton text="SOPE NOW" link="/categories/furniture" />
           </div>
           <div className="featured-right">
             <img

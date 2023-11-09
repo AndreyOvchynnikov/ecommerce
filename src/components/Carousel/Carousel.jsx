@@ -56,7 +56,7 @@ const Carousel = ({ carouselProducts }) => {
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {carouselProducts.map((product) => (
-            <Link key={product.id} href="/">
+            <Link key={product.id} to={`/products/${product.id}`}>
               <div ref={card} className={s.carouselCard}>
                 <img
                   src={product.img}

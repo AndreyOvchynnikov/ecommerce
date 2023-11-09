@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const navbarContainer = useRef();
+  
+  const [allLinkStatus, setAllLinkStatus] = useState(true);
+  const [lampLinkStatus, setLampLinkStatus] = useState(true);
+  const [furnitureLinkStatus, setFurnitureLinkStatus] = useState(true);
+  const { category, productId } = useParams();
 
-const navbarContainer = useRef();
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -15,6 +20,38 @@ const navbarContainer = useRef();
     });
   }, []);
 
+  useEffect(() => {
+    switch (category) {
+      case "All":
+        setAllLinkStatus(false);
+        setLampLinkStatus(true);
+        setFurnitureLinkStatus(true);
+        break;
+      case "lamp":
+        setLampLinkStatus(false);
+        setAllLinkStatus(true);
+        setFurnitureLinkStatus(true);
+        break;
+      case "furniture":
+        setFurnitureLinkStatus(false);
+        setAllLinkStatus(true);
+        setLampLinkStatus(true);
+        break;
+      default:
+        setAllLinkStatus(true);
+        setLampLinkStatus(true);
+        setFurnitureLinkStatus(true);
+      }
+    }, [category])
+
+  useEffect(() => {
+    if (!productId) {
+        return
+    }
+        setAllLinkStatus(true);
+        setLampLinkStatus(true);
+        setFurnitureLinkStatus(true);
+    },[productId])
 
     return (
     <>
@@ -41,15 +78,15 @@ const navbarContainer = useRef();
             </div>
             <div className="nav-items">
               <div className="nav-links nav-items">
-                <Link to="/categories">
-                  <span className="nav-item">CATEGORIES</span>
-                </Link>
-                <Link href="/category/lamps">
-                  <span className="nav-item">LAMPS</span>
-                </Link>
-                <Link href="/category/furniture">
-                  <span className="nav-item">FURNITURE</span>
-                </Link>
+                  {allLinkStatus && <Link to="/categories/All">
+                    <span className="nav-item">CATEGORIES</span>
+                  </Link>} 
+                  {lampLinkStatus && <Link to="/categories/lamp">
+                    <span className="nav-item">LAMPS</span>
+                  </Link>}
+                  {furnitureLinkStatus && <Link to="/categories/furniture">
+                    <span className="nav-item">FURNITURE</span>
+                  </Link>}
               </div>
 
               <span

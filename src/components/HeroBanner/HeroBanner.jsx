@@ -13,7 +13,7 @@ const HeroBanner = ({ hero }) => {
         <div className="container">
           <div className="home-header-container">
             <div className="featured header-one">
-                <Link href="/category/furniture">
+                <Link to="/categories/furniture">
                     <div className="header-img-container">
                         <h2 className="featured-title">Life Comfortably</h2>
                     </div>
@@ -25,7 +25,7 @@ const HeroBanner = ({ hero }) => {
                 </Link>
             </div>    
             <div className="featured header-two">
-                <Link href="/category/skin care">
+                <Link to="/categories/skin-care">
                     <div className="header-img-container">
                         <h2 className="featured-title">HW Skincare</h2>
                     </div>
@@ -37,7 +37,7 @@ const HeroBanner = ({ hero }) => {
                 </Link>  
             </div>                                        
             <div className="featured header-four">
-                <Link href="/category/kitchen">
+                <Link to="/categories/kitchen">
                     <div className="header-img-container">
                         <h2 className="featured-title">Kitchen & Dining</h2>
                     </div>
@@ -49,7 +49,7 @@ const HeroBanner = ({ hero }) => {
                 </Link>               
             </div>     
             <div className="featured header-four-low">
-                <Link href="/category/electronics">
+                <Link to="/categories/electronic">
                     <div className="header-img-container">
                         <h2 className="featured-title">Home Electronics</h2>
                     </div>
