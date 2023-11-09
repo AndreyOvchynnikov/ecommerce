@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecommerce/static/css/main.469f7b7c.css",
-    "main.js": "/ecommerce/static/js/main.98e4109b.js",
+    "main.js": "/ecommerce/static/js/main.98b85638.js",
     "static/media/bodyoil1.jpg": "/ecommerce/static/media/bodyoil1.df87658baed4f2785f85.jpg",
     "static/media/14.png": "/ecommerce/static/media/14.a674c36b5a4aa0bb7377.png",
     "static/media/9.png": "/ecommerce/static/media/9.c6d969e8587dd1042095.png",
@@ -67,10 +67,10 @@
     "static/media/blackandwhite2.webp": "/ecommerce/static/media/blackandwhite2.1dac1e8c88ee5d5f213b.webp",
     "index.html": "/ecommerce/index.html",
     "main.469f7b7c.css.map": "/ecommerce/static/css/main.469f7b7c.css.map",
-    "main.98e4109b.js.map": "/ecommerce/static/js/main.98e4109b.js.map"
+    "main.98b85638.js.map": "/ecommerce/static/js/main.98b85638.js.map"
   },
   "entrypoints": [
     "static/css/main.469f7b7c.css",
-    "static/js/main.98e4109b.js"
+    "static/js/main.98b85638.js"
   ]
 }
