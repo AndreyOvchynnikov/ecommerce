@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.448f4f40.css",
-    "main.js": "/ecommerce/static/js/main.88fe16f8.js",
+    "main.css": "/ecommerce/static/css/main.0ea337a8.css",
+    "main.js": "/ecommerce/static/js/main.f6f881c3.js",
     "static/media/bodyoil1.jpg": "/ecommerce/static/media/bodyoil1.df87658baed4f2785f85.jpg",
     "static/media/14.png": "/ecommerce/static/media/14.a674c36b5a4aa0bb7377.png",
     "static/media/9.png": "/ecommerce/static/media/9.c6d969e8587dd1042095.png",
@@ -36,6 +36,7 @@
     "static/media/home-img-4.jpg": "/ecommerce/static/media/home-img-4.672d1d0d7656e2a778f6.jpg",
     "static/media/19.jpg": "/ecommerce/static/media/19.1e5832c36583dbb804f2.jpg",
     "static/media/copenhagen2.webp": "/ecommerce/static/media/copenhagen2.7d59736ad81db76fb73b.webp",
+    "static/media/empty-cart.png": "/ecommerce/static/media/empty-cart.17f48bd13327a233e04a.png",
     "static/media/8.jpg": "/ecommerce/static/media/8.35f833ef20163491e804.jpg",
     "static/media/banner1.jpg": "/ecommerce/static/media/banner1.021adea5caa612e7dea0.jpg",
     "static/media/vase2.webp": "/ecommerce/static/media/vase2.383a31080faaf215e3a8.webp",
@@ -66,11 +67,11 @@
     "static/media/copenhagen1.webp": "/ecommerce/static/media/copenhagen1.39e6de3d2e09d6e5f7ef.webp",
     "static/media/blackandwhite2.webp": "/ecommerce/static/media/blackandwhite2.1dac1e8c88ee5d5f213b.webp",
     "index.html": "/ecommerce/index.html",
-    "main.448f4f40.css.map": "/ecommerce/static/css/main.448f4f40.css.map",
-    "main.88fe16f8.js.map": "/ecommerce/static/js/main.88fe16f8.js.map"
+    "main.0ea337a8.css.map": "/ecommerce/static/css/main.0ea337a8.css.map",
+    "main.f6f881c3.js.map": "/ecommerce/static/js/main.f6f881c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.448f4f40.css",
-    "static/js/main.88fe16f8.js"
+    "static/css/main.0ea337a8.css",
+    "static/js/main.f6f881c3.js"
   ]
 }
