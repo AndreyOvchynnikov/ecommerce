@@ -6,7 +6,7 @@ import homeImage4 from '../../img/header/home-img-4.jpg';
 
 
 
-const HeroBanner = ({ hero }) => {
+const HeroBanner = () => {
   return (
     <>
       <div className="home-header">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useRef, useState } from "react";
 import s from "./Carousel.module.css";
+import { useStateContext } from "components/context/StateContext";
 
 
 const Carousel = ({ carouselProducts }) => {
@@ -8,6 +9,7 @@ const Carousel = ({ carouselProducts }) => {
   const cardsWrapper = useRef();
   const carouselViewPort = useRef();
   const [translateX, setTranslateX] = useState(0);
+  const { addTrendingProduct } = useStateContext();
 
   const carosel = (direction) => {
     let cardWidth = parseInt(
@@ -56,7 +58,9 @@ const Carousel = ({ carouselProducts }) => {
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {carouselProducts.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`}>
+            <Link key={product.id} to={`/products/${product.id}`}
+            onClick={() => addTrendingProduct(product)}
+            >
               <div ref={card} className={s.carouselCard}>
                 <img
                   src={product.img}

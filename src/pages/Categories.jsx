@@ -1,15 +1,21 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import CategoryProduct from '../components/CategoryProduct/CategoryProduct';
 import { products } from "../components/AllData";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
 
 
 const Categories = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const { category } = useParams();
+  const select = useRef();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   
   useEffect(() => {
+    select.current.value = category;
     setSelectedCategory(category)
   }, [category])
  
@@ -21,7 +27,12 @@ const Categories = () => {
     }, [])
     
     const filteredProducts = selectedCategory === "All" ?
-        [...products] : products.filter(product => product.category === selectedCategory);
+    [...products] : products.filter(product => product.category === selectedCategory);
+  
+  const handleChange = (event) => {
+    setSelectedCategory(event.target.value);
+    navigate(`/categories/${event.target.value}`)
+  }
         
     return (
     <>
@@ -38,9 +49,10 @@ const Categories = () => {
             <h2 className="category-title">{selectedCategory.toUpperCase()}</h2>
           </div>
           <div className="category-header-right">
-            <select
+              <select
+                ref={select}
               defaultValue=""
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={handleChange}
               name="category"
               id="select-category"
             >

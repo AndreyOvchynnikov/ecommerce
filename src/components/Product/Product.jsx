@@ -1,14 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { products } from "../AllData";
+import { useStateContext } from "components/context/StateContext";
+import toast, { Toaster } from "react-hot-toast";
 
 const Product = ({ productId }) => {
-    const actualProduct = products.find(product => product.id === productId);
-    const [mainImage, setMainImage] = useState(actualProduct.img);
+  const actualProduct = products.find(product => product.id === productId);
+  const [mainImage, setMainImage] = useState(actualProduct.img);
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useStateContext();
 
-
-
+  const incQuantity = () => setQuantity(quantity + 1);
+  const decQuantity = () => {
+    if (quantity === 1) {
+      return;
+    };
+    setQuantity(quantity - 1);
+  };
+  const addToCartClick = (actualProduct, quantity) => {
+    addToCart(actualProduct, quantity);
+    toast.success("Product added to your cart!")
+  }
+  useEffect(() => {
+    setMainImage(actualProduct.img);
+    window.scrollTo(0, 0);
+  }, [actualProduct]);
+  
     return (
-         <>
+      <>
+      <div><Toaster/></div>
       <section className="product-details">
         <div className="container">
           <div className="product-details-container">
@@ -46,33 +65,30 @@ const Product = ({ productId }) => {
                   <span className="item-mid-title">Quantity:</span>
                   <div className="quantity">
                     <button
-                        // onClick={decQty}
+                        onClick={decQuantity}
                         className="minus qnt-changer">
                       <span>&#8722;</span>
                     </button>
-                    <div className="item-qty">1</div>
+                      <div className="item-qty">{quantity}</div>
                         <button
-                            // onClick={incQty}
+                            onClick={incQuantity}
                             className="plus qnt-changer">
                       <span>&#43;</span>
                     </button>
                   </div>
-                  {/* <div className="item-price">
-                    {Number(price * qty).toFixed(2)}$
-                  </div> */}
+                  <div className="item-price">
+                    {Number(actualProduct.price * quantity).toFixed(2)}$
+                  </div>
                 </div>
                 <div className="item-footer">
                   <button
                     className="add-to-cart-btn"
-                    // onClick={() => onAdd(product, qty)}
+                    onClick={() =>  addToCartClick(actualProduct, quantity)}
                   >
                     ADD TO CART
                   </button>
                   <button
                     className="buy-now-btn"
-                    // onClick={() => {
-                    //   handleBuyNow(product);
-                    // }}
                   >
                     BUY NOW
                   </button>

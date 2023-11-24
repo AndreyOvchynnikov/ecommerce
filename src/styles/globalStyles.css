@@ -20,7 +20,9 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.active {
+  text-decoration: underline;
+}
 .layout-section {
   margin-top: 130px;
 }
@@ -113,7 +115,7 @@ a {
 }
 
 .menu-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 19px;
   gap: 19px;
@@ -442,8 +444,8 @@ a {
   color: #fff;
 }
 
-.footer-menu > .container {
-}
+/* .footer-menu > .container {
+} */
 .footer-menu-items {
   height: 130px;
   display: flex;

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -7,8 +6,8 @@ const Footer = () => {
             <div className="container">
             <h2>Newsletter</h2>
                 <form className="newsletter-form-container">
-                    <input type="email" name="email" id="nl-email" placeholder='john@doe.com' />                    
-                    <button type='submit' className='nl-submit'>Subscribe</button>
+                    <input type="email" name="email" placeholder='john@doe.com' />                    
+                    <button type='button' className='nl-submit'>Subscribe</button>
                 </form>
             </div>
         </div>
@@ -16,31 +15,14 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-menu-items">
                     <div className="nav-items">
-                            <Link href='#navbar'>
                                 <span className="nav-item">About</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">Store locator</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">FAQs</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">News</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">Careers</span>
-                            </Link>
-
-                            <Link href='#navbar'>
-                                <span className="nav-item">Contact Us</span>
-                            </Link>
+                                <span className="nav-item">Store locator</span>                            
+                                <span className="nav-item">FAQs</span>                                                    
+                                <span className="nav-item">News</span>                                                       
+                                <span className="nav-item">Careers</span>                                                      
+                                <span className="nav-item">Contact Us</span>                            
                     </div>
-                <div className="cr">Built with love</div>
+                <div className="cr">Built with passion</div>
                 </div>
             </div>
         </div>

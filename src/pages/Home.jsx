@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import HeroBanner from '../components/HeroBanner';
 import CategoryProducts from '../components/CategoryProducts';
 import FeaturedBanner from '../components/FeaturedBanner';
@@ -10,6 +11,10 @@ const Home = () => {
 
     const proudProducts = products.filter(({ isProud }) => isProud);
     const trendProducts = products.filter(({ isTrending }) => isTrending);
+
+     useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
     return (
         <>
@@ -25,8 +30,7 @@ const Home = () => {
             <CategoryProducts products={proudProducts} />
             <FeaturedBanner />
             <TrendingProducts title="Trending Now" products={trendProducts} />
-            <FeaturedBannerReverse />
-             
+            <FeaturedBannerReverse />   
         </>
         
     )
