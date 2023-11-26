@@ -9,8 +9,13 @@ const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+function appHeight() {
+  const doc = document.documentElement
+  doc.style.setProperty('--vh', (window.innerHeight*.01) + 'px');
+}
+
+  window.addEventListener('resize', appHeight);
+  appHeight();
 
   return (
     <StateContext>
