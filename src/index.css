@@ -882,7 +882,7 @@ a {
   flex-direction: column;
   gap: 24px;
   overflow-y: scroll;
-  min-height: calc(100vh - 129px - 70px);
+  min-height: calc(calc(var(--vh, 1vh) * 100) - 129px - 70px);
   padding: 5px;
 }
 
