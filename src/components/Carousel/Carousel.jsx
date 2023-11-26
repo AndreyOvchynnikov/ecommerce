@@ -26,9 +26,9 @@ const Carousel = ({ carouselProducts }) => {
       direction === "rightArrow" &&
       -translateX < cardsWrapperWidth - carouseViewPortWidth
     ) {
-      setTranslateX(translateX - cardWidth - 19);
+      setTranslateX(translateX - cardWidth - 15);
     } else if (direction === "leftArrow" && translateX < 0) {
-      setTranslateX(translateX + cardWidth + 19);
+      setTranslateX(translateX + cardWidth + 15);
     }
     };
     
@@ -58,7 +58,7 @@ const Carousel = ({ carouselProducts }) => {
           style={{ transform: `translateX(${translateX}px)` }}
         >
           {carouselProducts.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`}
+            <Link key={product.id} to={`/products/${product.id}`} className={s.link}
             onClick={() => addTrendingProduct(product)}
             >
               <div ref={card} className={s.carouselCard}>

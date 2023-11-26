@@ -7,12 +7,19 @@
   width: 100%;
   overflow: hidden;
 }
-
+.link {
+  border: 2px solid rgba(0, 0, 0, 0.071);
+  transition: border 0.2s ease-out;
+    &:hover {
+      border: 2px solid rgb(38, 38, 38);
+    }
+}
 .cardsWrap {
   display: flex;
-  gap: 19px;
+  gap: 12px;
   width: fit-content;
   transition: 500ms linear;
+  flex-grow: 1;
 }
 
 .carouselCard {
@@ -24,13 +31,6 @@
   gap: 10px;
   background-color: #fff;
   cursor: pointer;
-  outline: 2px solid rgba(0, 0, 0, 0.071);
-  outline-offset: -2px;
-  transition: outline 0.2s ease-out;
-}
-
-.carouselCard:hover {
-  outline: 2px solid rgb(38, 38, 38);
 }
 
 .cardImg {

@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import { lazy } from "react";
 import { StateContext } from "./components/context/StateContext";
-import SharedLayout from "./components/SharedLayout/SharedLayout";
-import Categories from "./pages/Categories";
-import Home from "./pages/Home";
-import ProductPage from "./pages/ProductPage";
-import "./styles/globalStyles.css";
+
+const SharedLayout = lazy(() => import("./components/SharedLayout/SharedLayout"));
+const Categories = lazy(() => import("./pages/Categories"));
+const Home = lazy(() => import("./pages/Home"));
+const ProductPage = lazy(() => import("./pages/ProductPage"));
 
 function App() {
 
