@@ -1,7 +1,14 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.2ff5a88d.css",
-    "main.js": "/ecommerce/static/js/main.f6f881c3.js",
+    "main.css": "/ecommerce/static/css/main.02f08939.css",
+    "main.js": "/ecommerce/static/js/main.f26b21d7.js",
+    "static/js/622.477bc36d.chunk.js": "/ecommerce/static/js/622.477bc36d.chunk.js",
+    "static/js/211.0e876a6e.chunk.js": "/ecommerce/static/js/211.0e876a6e.chunk.js",
+    "static/css/488.5ee187ba.chunk.css": "/ecommerce/static/css/488.5ee187ba.chunk.css",
+    "static/js/488.9b562db0.chunk.js": "/ecommerce/static/js/488.9b562db0.chunk.js",
+    "static/css/330.1d144404.chunk.css": "/ecommerce/static/css/330.1d144404.chunk.css",
+    "static/js/330.2b9b15ef.chunk.js": "/ecommerce/static/js/330.2b9b15ef.chunk.js",
+    "static/js/418.fd0881af.chunk.js": "/ecommerce/static/js/418.fd0881af.chunk.js",
     "static/media/bodyoil1.jpg": "/ecommerce/static/media/bodyoil1.df87658baed4f2785f85.jpg",
     "static/media/14.png": "/ecommerce/static/media/14.a674c36b5a4aa0bb7377.png",
     "static/media/9.png": "/ecommerce/static/media/9.c6d969e8587dd1042095.png",
@@ -67,11 +74,18 @@
     "static/media/copenhagen1.webp": "/ecommerce/static/media/copenhagen1.39e6de3d2e09d6e5f7ef.webp",
     "static/media/blackandwhite2.webp": "/ecommerce/static/media/blackandwhite2.1dac1e8c88ee5d5f213b.webp",
     "index.html": "/ecommerce/index.html",
-    "main.2ff5a88d.css.map": "/ecommerce/static/css/main.2ff5a88d.css.map",
-    "main.f6f881c3.js.map": "/ecommerce/static/js/main.f6f881c3.js.map"
+    "main.02f08939.css.map": "/ecommerce/static/css/main.02f08939.css.map",
+    "main.f26b21d7.js.map": "/ecommerce/static/js/main.f26b21d7.js.map",
+    "622.477bc36d.chunk.js.map": "/ecommerce/static/js/622.477bc36d.chunk.js.map",
+    "211.0e876a6e.chunk.js.map": "/ecommerce/static/js/211.0e876a6e.chunk.js.map",
+    "488.5ee187ba.chunk.css.map": "/ecommerce/static/css/488.5ee187ba.chunk.css.map",
+    "488.9b562db0.chunk.js.map": "/ecommerce/static/js/488.9b562db0.chunk.js.map",
+    "330.1d144404.chunk.css.map": "/ecommerce/static/css/330.1d144404.chunk.css.map",
+    "330.2b9b15ef.chunk.js.map": "/ecommerce/static/js/330.2b9b15ef.chunk.js.map",
+    "418.fd0881af.chunk.js.map": "/ecommerce/static/js/418.fd0881af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ff5a88d.css",
-    "static/js/main.f6f881c3.js"
+    "static/css/main.02f08939.css",
+    "static/js/main.f26b21d7.js"
   ]
 }
