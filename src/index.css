@@ -852,7 +852,7 @@ a {
   .slide-cart-container {
     min-width: 100%;
     max-width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(var(--vh, 1vh) * 100);
   }
 }
 
