@@ -16,7 +16,8 @@ const Categories = () => {
   
   useEffect(() => {
     select.current.value = category;
-    setSelectedCategory(category)
+    setSelectedCategory(category);
+    window.scrollTo(0, 0);
   }, [category])
  
     const selectCategories = products.reduce((acc, { category }) => {
