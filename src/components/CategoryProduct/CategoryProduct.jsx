@@ -4,20 +4,19 @@ import { Link } from "react-router-dom";
 
 const CategoryProduct = ({ property, productDetails }) => {
 
-  const { addTrendingProduct } = useStateContext();  
+  const { addTrendingProduct } = useStateContext();
   
   return (
-      <div className={`category-product ${property}`}>
+    <div className={`category-product ${property}`}>
       <Link to={`/products/${productDetails.id}`}
-      onClick={() => addTrendingProduct(productDetails)}
+        onClick={() => addTrendingProduct(productDetails)}
       >
-                <div className="category-product-header">
+        <div className="category-product-header">
           <div
-            className={`category-product-img-wrapper ${
-              property === "wide" ? "wide-img" : "normal-img"
-            }`}
+            className={`category-product-img-wrapper ${property === "wide" ? "wide-img" : "normal-img"
+              }`}
           >
-            <img 
+            <img
               src={productDetails.img}
               alt="a product"
               className="category-product-img"
@@ -44,9 +43,9 @@ const CategoryProduct = ({ property, productDetails }) => {
             </div>
           </>
         )}
-          </Link>
+      </Link>
         
-      </div>
+    </div>
   );
 };
 

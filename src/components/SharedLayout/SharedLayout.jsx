@@ -6,22 +6,20 @@ import Footer from "../Footer";
 
 const SharedLayout = () => {
 
-    return (
+  return (
     <div className="layout">
       <header className="header">
         <Navbar />
       </header>
-        <section className="layout-section">
-          <Suspense fallback={
-            <div className="backdropSpinner">
-              <div className="wrapperSpinner"> 
+      <section className="layout-section">
+        <Suspense fallback={
+          <div className="backdropSpinner">
+            <div className="wrapperSpinner">
               <ThreeDots color="#191919" />
-              </div>
-          </div> }>
-            
-            
-            <Outlet />
-          </Suspense>
+            </div>
+          </div>}>
+          <Outlet />
+        </Suspense>
       </section>
       <footer>
         <Footer />

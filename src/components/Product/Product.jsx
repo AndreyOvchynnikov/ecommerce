@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { products } from "../AllData";
 import { useStateContext } from "components/context/StateContext";
 import toast, { Toaster } from "react-hot-toast";
+import { products } from "../AllData";
 
 const Product = ({ productId }) => {
   const actualProduct = products.find(product => product.id === productId);
@@ -25,9 +25,9 @@ const Product = ({ productId }) => {
     window.scrollTo(0, 0);
   }, [actualProduct]);
   
-    return (
-      <>
-      <div><Toaster/></div>
+  return (
+    <>
+      <div><Toaster /></div>
       <section className="product-details">
         <div className="container">
           <div className="product-details-container">
@@ -41,15 +41,15 @@ const Product = ({ productId }) => {
                   />
                 </div>
                 <div className="all-imgs-container">
-                    <button className="img-container" onClick={() => setMainImage(actualProduct.img)}>
-                        <img src={actualProduct.img} className="an-img" alt="top view"/>
-                    </button>
-                    <button className="img-container" onClick={() => setMainImage(actualProduct.otherImgs[0])}>
-                        <img src={actualProduct.otherImgs[0]} className="an-img" alt="top view"/>
-                    </button>
-                    <button className="img-container" onClick={() => setMainImage(actualProduct.otherImgs[1])}>
-                        <img src={actualProduct.otherImgs[1]} className="an-img" alt="top view"/>
-                    </button>
+                  <button className="img-container" onClick={() => setMainImage(actualProduct.img)}>
+                    <img src={actualProduct.img} className="an-img" alt="top view" />
+                  </button>
+                  <button className="img-container" onClick={() => setMainImage(actualProduct.otherImgs[0])}>
+                    <img src={actualProduct.otherImgs[0]} className="an-img" alt="top view" />
+                  </button>
+                  <button className="img-container" onClick={() => setMainImage(actualProduct.otherImgs[1])}>
+                    <img src={actualProduct.otherImgs[1]} className="an-img" alt="top view" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -65,14 +65,14 @@ const Product = ({ productId }) => {
                   <span className="item-mid-title">Quantity:</span>
                   <div className="quantity">
                     <button
-                        onClick={decQuantity}
-                        className="minus qnt-changer">
+                      onClick={decQuantity}
+                      className="minus qnt-changer">
                       <span>&#8722;</span>
                     </button>
-                      <div className="item-qty">{quantity}</div>
-                        <button
-                            onClick={incQuantity}
-                            className="plus qnt-changer">
+                    <div className="item-qty">{quantity}</div>
+                    <button
+                      onClick={incQuantity}
+                      className="plus qnt-changer">
                       <span>&#43;</span>
                     </button>
                   </div>
@@ -83,7 +83,7 @@ const Product = ({ productId }) => {
                 <div className="item-footer">
                   <button
                     className="add-to-cart-btn"
-                    onClick={() =>  addToCartClick(actualProduct, quantity)}
+                    onClick={() => addToCartClick(actualProduct, quantity)}
                   >
                     ADD TO CART
                   </button>
@@ -97,26 +97,23 @@ const Product = ({ productId }) => {
             </div>
           </div>
           <div className="product-specs">
-                    <div className="spec">
-                        <div className="spec-title">Texture:</div>
-                        <div className="spec-desc">{actualProduct.texture}</div>
-                    </div>
-                        <div className="spec">
-                        <div className="spec-title">Weight:</div>
-                        <div className="spec-desc">{actualProduct.weight}</div>
-                    </div>
-                        <div className="spec">
-                        <div className="spec-title">Size:</div>
-                        <div className="spec-desc">{actualProduct.size}</div>
-                    </div>                                      
+            <div className="spec">
+              <div className="spec-title">Texture:</div>
+              <div className="spec-desc">{actualProduct.texture}</div>
+            </div>
+            <div className="spec">
+              <div className="spec-title">Weight:</div>
+              <div className="spec-desc">{actualProduct.weight}</div>
+            </div>
+            <div className="spec">
+              <div className="spec-title">Size:</div>
+              <div className="spec-desc">{actualProduct.size}</div>
+            </div>
           </div>
         </div>
       </section>
     </>
   );
 };
-
-
-
 
 export default Product;

@@ -1,7 +1,6 @@
 import CategoryProduct from "../CategoryProduct/CategoryProduct";
 
-
-const CategoryProducts = ({products}) => {
+const CategoryProducts = ({ products }) => {
 
 
   return (

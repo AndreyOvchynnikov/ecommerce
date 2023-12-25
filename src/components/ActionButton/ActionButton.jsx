@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import React from "react";
 import s from './ActionButton.module.css';
 
 const ActionButton = ({ text, link }) => {

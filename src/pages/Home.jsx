@@ -12,9 +12,9 @@ const Home = () => {
     const proudProducts = products.filter(({ isProud }) => isProud);
     const trendProducts = products.filter(({ isTrending }) => isTrending);
 
-     useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <>
@@ -30,10 +30,10 @@ const Home = () => {
             <CategoryProducts products={proudProducts} />
             <FeaturedBanner />
             <TrendingProducts title="Trending Now" products={trendProducts} />
-            <FeaturedBannerReverse />   
+            <FeaturedBannerReverse />
         </>
         
     )
-}
+};
 
 export default Home;

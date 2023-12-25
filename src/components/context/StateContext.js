@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-const Context = createContext();
+const Context = createContext();  
 
 export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false);

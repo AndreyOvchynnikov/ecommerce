@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
 
-    return (
+  return (
     <>
       {showCart && <Cart />}
 
@@ -41,15 +41,15 @@ const Navbar = () => {
             </div>
             <div className="nav-items">
               <div className="nav-links nav-items">
-                   <NavLink to="/categories/All">
-                    <span className="nav-item">CATEGORIES</span>
-                  </NavLink>
-                   <NavLink to="/categories/lamp">
-                    <span className="nav-item">LAMPS</span>
-                  </NavLink>
-                   <NavLink to="/categories/furniture">
-                    <span className="nav-item">FURNITURE</span>
-                  </NavLink>
+                <NavLink to="/categories/All">
+                  <span className="nav-item">CATEGORIES</span>
+                </NavLink>
+                <NavLink to="/categories/lamp">
+                  <span className="nav-item">LAMPS</span>
+                </NavLink>
+                <NavLink to="/categories/furniture">
+                  <span className="nav-item">FURNITURE</span>
+                </NavLink>
               </div>
 
               <span
@@ -89,12 +89,12 @@ const Navbar = () => {
                   <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
                 </svg>
               </div>
-                {showBurgerMenu && <div className="menu-container">
+              {showBurgerMenu && <div className="menu-container">
                 <div
                   className="close-menu"
                   onClick={() => {
-                  setshowBurgerMenu(!showBurgerMenu);
-                }}
+                    setshowBurgerMenu(!showBurgerMenu);
+                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,8 +106,8 @@ const Navbar = () => {
                     <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
                   </svg>
                 </div>
-                  <div className="menu">
-                    <Link to="/categories/All" onClick={() => setshowBurgerMenu(!showBurgerMenu)}>
+                <div className="menu">
+                  <Link to="/categories/All" onClick={() => setshowBurgerMenu(!showBurgerMenu)}>
                     <span className="nav-item">CATEGORIES</span>
                   </Link>
                   <Link to="/categories/lamp" onClick={() => setshowBurgerMenu(!showBurgerMenu)}>

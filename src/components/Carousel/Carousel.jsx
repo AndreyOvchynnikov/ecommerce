@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import React, { useRef, useState } from "react";
-import s from "./Carousel.module.css";
+import { useRef, useState } from "react";
 import { useStateContext } from "components/context/StateContext";
+import s from "./Carousel.module.css";
 
 
 const Carousel = ({ carouselProducts }) => {
@@ -30,7 +30,7 @@ const Carousel = ({ carouselProducts }) => {
     } else if (direction === "leftArrow" && translateX < 0) {
       setTranslateX(translateX + cardWidth + 15);
     }
-    };
+  };
     
     
   return (
@@ -59,7 +59,7 @@ const Carousel = ({ carouselProducts }) => {
         >
           {carouselProducts.map((product) => (
             <Link key={product.id} to={`/products/${product.id}`} className={s.link}
-            onClick={() => addTrendingProduct(product)}
+              onClick={() => addTrendingProduct(product)}
             >
               <div ref={card} className={s.carouselCard}>
                 <img

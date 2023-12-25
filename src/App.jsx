@@ -7,28 +7,28 @@ const Categories = lazy(() => import("./pages/Categories"));
 const Home = lazy(() => import("./pages/Home"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 
-function App() {
+const App = () => {
 
-function appHeight() {
-  const doc = document.documentElement
-  doc.style.setProperty('--vh', (window.innerHeight*.01) + 'px');
-}
+  function appHeight() {
+    const doc = document.documentElement
+    doc.style.setProperty('--vh', (window.innerHeight * .01) + 'px');
+  }
 
   window.addEventListener('resize', appHeight);
   appHeight();
 
   return (
     <StateContext>
-        <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />} />
-        <Route path="categories/:category" element={<Categories />} />
-        <Route path="products/:productId" element={<ProductPage />} />
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="categories/:category" element={<Categories />} />
+          <Route path="products/:productId" element={<ProductPage />} />
+        </Route>
+      </Routes>
     </StateContext>
     
   )
-}
+};
 
 export default App;
