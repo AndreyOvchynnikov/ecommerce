@@ -984,6 +984,8 @@ a {
 
 .cart-item-right {
   width: fit-content;
+  min-width: 120px;
+  text-align: right;
   justify-self: flex-end;
   display: flex;
   flex-direction: column;
@@ -1017,6 +1019,7 @@ a {
 .cart-item-title {
   margin: 0;
   padding-right: 20px;
+  max-width: 160px;
 }
 
 .gnt-changer-container {
