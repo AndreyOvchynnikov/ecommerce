@@ -6,6 +6,7 @@ import homeImage4 from '../../img/header/home-img-4.jpg';
 
 const HeroBanner = () => {
 
+
     return (
         <>
             <div className="home-header">

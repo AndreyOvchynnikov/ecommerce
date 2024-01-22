@@ -16,3 +16,39 @@
   background-color: transparent;
   color: black;
 }
+
+.animatedBtn {
+  width: fit-content;
+  animation: bell 1s linear forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes bell {
+   0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    10%,
+    20%,
+    30%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80%,
+    90% {
+        transform: rotate(6deg);
+    }
+    5%,
+    15%,
+    25%,
+    35%,
+    45%,
+    55%,
+    65%,
+    75%,
+    85%,
+    95% {
+        transform: rotate(-6deg);
+    }
+}

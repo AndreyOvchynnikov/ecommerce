@@ -1,8 +1,14 @@
 import { useStateContext } from "components/context/StateContext";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 
 const CategoryProduct = ({ property, productDetails }) => {
+
+   const { ref, inView } = useInView({
+        triggerOnce: true,
+        rootMargin: "-100px 0px",
+    })
 
   const { addTrendingProduct } = useStateContext();
   
@@ -11,7 +17,7 @@ const CategoryProduct = ({ property, productDetails }) => {
       <Link to={`/products/${productDetails.id}`}
         onClick={() => addTrendingProduct(productDetails)}
       >
-        <div className="category-product-header">
+        <div ref={ref} className={inView? "category-product-header-animated" : "category-product-header"}>
           <div
             className={`category-product-img-wrapper ${property === "wide" ? "wide-img" : "normal-img"
               }`}
