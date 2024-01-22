@@ -5,8 +5,7 @@ const TrendingProducts = ({ title, products }) => {
     <>
       <section className="trending">
         <div className="container">
-          <h2>{title}</h2>
-          <br />
+          <h2 style={{marginBottom: "20px"}}>{title}</h2>
           <Carousel carouselProducts={products} />
         </div>
       </section>

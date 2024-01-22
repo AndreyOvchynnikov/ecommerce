@@ -19,11 +19,6 @@ const Home = () => {
     return (
         <>
             <HeroBanner />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <div className="container">
                 <h2 className="section-title">Products we are proud of</h2>
             </div>

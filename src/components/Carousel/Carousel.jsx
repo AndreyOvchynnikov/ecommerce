@@ -5,13 +5,15 @@ import s from "./Carousel.module.css";
 
 
 const Carousel = ({ carouselProducts }) => {
+
   const card = useRef();
   const cardsWrapper = useRef();
   const carouselViewPort = useRef();
   const [translateX, setTranslateX] = useState(0);
   const { addTrendingProduct } = useStateContext();
 
-  const carosel = (direction) => {
+  const handleClick = (direction) => {
+
     let cardWidth = parseInt(
       getComputedStyle(card.current).width.replace("px", "")
     );
@@ -22,13 +24,15 @@ const Carousel = ({ carouselProducts }) => {
       getComputedStyle(carouselViewPort.current).width.replace("px", "")
     );
 
+    const containerPadding = 15;
+
     if (
       direction === "rightArrow" &&
       -translateX < cardsWrapperWidth - carouseViewPortWidth
     ) {
-      setTranslateX(translateX - cardWidth - 15);
+      setTranslateX(translateX - cardWidth - containerPadding);
     } else if (direction === "leftArrow" && translateX < 0) {
-      setTranslateX(translateX + cardWidth + 15);
+      setTranslateX(translateX + cardWidth + containerPadding);
     }
   };
     
@@ -37,7 +41,7 @@ const Carousel = ({ carouselProducts }) => {
     <div className={s.carousel}>
       <div
         onClick={() => {
-          carosel("leftArrow");
+          handleClick("leftArrow");
         }}
         className={s.navLeft}
       >
@@ -45,7 +49,7 @@ const Carousel = ({ carouselProducts }) => {
       </div>
       <div
         onClick={() => {
-          carosel("rightArrow");
+          handleClick("rightArrow");
         }}
         className={s.navRight}
       >

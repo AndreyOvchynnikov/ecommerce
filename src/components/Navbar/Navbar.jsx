@@ -10,11 +10,15 @@ const Navbar = () => {
   const [showBurgerMenu, setshowBurgerMenu] = useState(false);
 
   useEffect(() => {
+
+    const normalNavbarHeight = "120px";
+    const decreasedNavbarHeight = "70px";
+
     document.addEventListener("scroll", () => {
       if (window.scrollY > 20) {
-        navbarContainer.current.style.height = "70px";
+        navbarContainer.current.style.height = decreasedNavbarHeight;
       } else {
-        navbarContainer.current.style.height = "120px";
+        navbarContainer.current.style.height = normalNavbarHeight;
       }
     });
   }, []);
