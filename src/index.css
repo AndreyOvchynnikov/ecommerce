@@ -1307,11 +1307,36 @@ select.filter-select:hover {
   gap: 6px;
   justify-content: space-between;
   background-color: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.205);
-  outline-offset: -2px;
+  border: 2px solid transparent;
+  /* outline-offset: -2px; */
   cursor: pointer;
   transition: outline 0.2s ease-in-out;
 }
+
+.category-product-animated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  /* outline-offset: -2px; */
+  cursor: pointer;
+  transition: outline 0.2s ease-in-out;
+  animation: cardborder 0.5s linear forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes cardborder {
+  0% {
+    border: 2px solid transparent;
+  }
+  100% {
+    border: 2px solid rgba(0, 0, 0, 0.205);
+  }
+}
+
 
 .category-product:hover {
   outline: 2px solid rgb(38, 38, 38);

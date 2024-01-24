@@ -13,7 +13,7 @@ const CategoryProduct = ({ property, productDetails }) => {
   const { addTrendingProduct } = useStateContext();
   
   return (
-    <div className={`category-product ${property}`}>
+    <div className={inView? `category-product-animated ${property}` : `category-product ${property}`}>
       <Link to={`/products/${productDetails.id}`}
         onClick={() => addTrendingProduct(productDetails)}
       >
