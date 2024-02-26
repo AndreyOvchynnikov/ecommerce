@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.navbar-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.2s ease-in-out;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 900;
+  width: 120px;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  font-size: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.cart-products {
+  position: absolute;
+  top: -17px;
+  left: 5px;
+  background-color: #b6002c;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 5px;
+}
+
+.burger-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 19px;
+  gap: 19px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  background-color: #f3f3f3;
+  height: 117vh;
+  width: 100%;
+  z-index: 999;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.close-menu {
+  align-self: flex-end;
+  justify-self: flex-start;
+  cursor: pointer;
+  margin-top: 26px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    height: 80px;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}

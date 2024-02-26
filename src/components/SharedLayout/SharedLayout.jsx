@@ -11,7 +11,7 @@ const SharedLayout = () => {
       <header className="header">
         <Navbar />
       </header>
-      <section className="layout-section">
+      <main className="layout-section">
         <Suspense fallback={
           <div className="backdropSpinner">
             <div className="wrapperSpinner">
@@ -20,7 +20,7 @@ const SharedLayout = () => {
           </div>}>
           <Outlet />
         </Suspense>
-      </section>
+      </main>
       <footer>
         <Footer />
       </footer>

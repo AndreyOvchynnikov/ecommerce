@@ -1,0 +1,118 @@
+#banner {
+  margin: 100px 0px;
+}
+.featured-banner-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.featured-right {
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.featured-right-animated {
+  width: 50%;
+  max-height: 400px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50%);
+  animation: gotoleft 0.75s linear forwards;
+}
+
+@keyframes gotoleft {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.featured-left {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.featured-left-animated {
+  width: 50%;
+  max-height: 400px;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  padding: 0px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: gotoright 0.75s linear forwards;
+}
+
+@keyframes gotoright {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.featured-right-animated-reverse {
+  width: 50%;
+  max-height: 400px;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  padding: 0px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: gotoleft 0.75s linear forwards;
+}
+
+.featured-left-animated-reverse {
+  width: 50%;
+  max-height: 400px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: gotoright 0.75s linear forwards;
+}
+
+.banner-img {
+  height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
+}
+
+@media only screen and (max-width: 870px) {
+  .featured-left-animated,
+  .featured-right-animated-reverse {
+    padding: 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .featured-banner-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-left-animated,
+  .featured-right-animated,
+  .featured-left-animated-reverse,
+  .featured-right-animated-reverse {
+    width: 90%;
+  }
+}
+
+.banner-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.featured-desc {
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+}
